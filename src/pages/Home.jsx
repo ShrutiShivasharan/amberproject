@@ -1,10 +1,6 @@
 import img1 from '../assets/images/img1.avif';
 import img2 from '../assets/images/img2.avif';
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
 import { useState, useEffect, useRef } from 'react';
->>>>>>> 2e1be43 (product done)
 import '../assets/styles/style.css'
 import { Link } from 'react-router-dom';
 
@@ -207,14 +203,6 @@ export default function Home() {
     };
 
 
-<<<<<<< HEAD
-    return (
-        <>
-            <div className="md:grid md:grid-cols-12 md:gap-6 max-w-full mx-auto p-6">
-                <div className="md:col-span-8 overflow-y-auto max-h-[450px] scrollbar-hidden">
-                    <div className='border border-1 rounded-lg p-6 mb-3'>
-                        <p className="UniColor text-l my-3">United Kingdom / England / London</p>
-=======
     const mapRef = useRef(null);
     const scrollToMap = () => {
         console.log("Button clicked!"); // Debugging log
@@ -228,16 +216,10 @@ export default function Home() {
                 <div className="md:col-span-8 max-h-[screen]">
                     <div className='border border-1 border-t-0  rounded-lg p-6 mb-3 -mt-[50px]'>
                         <p className="UniColor text-l my-1">United Kingdom / England / London</p>
->>>>>>> 2e1be43 (product done)
                         <div className="grid grid-cols-12 gap-6 max-w-6xl mx-auto">
                             <div className="col-span-12 md:col-span-9 lg:col-span-9">
                                 <div className="my-3">
                                     <div className="relative w-full max-w-2xl mx-auto">
-<<<<<<< HEAD
-                                        <div className="overflow-hidden rounded-lg">
-                                            <img src={images[currentIndex]} alt="banners" className="w-full" />
-                                        </div>
-=======
                                         <div className="relative overflow-hidden rounded-lg">
                                             <img src={images[currentIndex]} alt="banners" className="w-full" />
                                         </div>
@@ -247,7 +229,6 @@ export default function Home() {
                                         <div className="absolute bottom-2 left-2 bg-white text-black text-sm px-3 py-1 rounded-full">
                                             <i class="fa-solid fa-star mx-2 fa-sx text-green-700"></i>4.9 (10)
                                         </div>
->>>>>>> 2e1be43 (product done)
                                         <button
                                             onClick={goToPreviousBtn}
                                             className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-3 py-2 rounded-full focus:outline-none">
@@ -281,21 +262,11 @@ export default function Home() {
                                 <i className="fa-solid fa-cube"></i>
                                 <span className="text-sm">3D Views</span>
                             </button>
-<<<<<<< HEAD
-                            <button className="flex flex-1 items-center justify-center space-x-2 hover:bg-gray-200 border border-black p-1 rounded-lg w-full">
-                                <i className="fa-regular fa-map"></i>
-                                <span className="text-sm">Map Views</span>
-                            </button>
-                        </div>
-
-
-=======
                             <button onClick={scrollToMap} className="flex flex-1 items-center justify-center space-x-2 hover:bg-gray-200 border border-black p-1 rounded-lg w-full">
                                 <span className="text-sm">Map View</span>
                             </button>
                         </div>
 
->>>>>>> 2e1be43 (product done)
                         <div className='md:grid md:grid-cols-12 gap-1 mx-auto my-5'>
                             <div className="col-span-10">
                                 <div className='my-1'>
@@ -310,11 +281,7 @@ export default function Home() {
                                         <div className='text-m space-x-2'>
                                             <p>4.3 mi from City Center</p>
                                             <p>(26m . 31m . 1h 27m)</p>
-<<<<<<< HEAD
-                                            <p className='UniColor'>View map</p>
-=======
                                             <p className='UniColor'  onClick={scrollToMap} >View map</p>
->>>>>>> 2e1be43 (product done)
                                         </div>
                                     </div>
                                 </div>
@@ -358,16 +325,11 @@ export default function Home() {
                                 <i className="fa-solid fa-file-lines UniColor"></i>
                                 <span className="text-xs font-medium">Bills Included</span>
                             </button>
-<<<<<<< HEAD
-                            <p className='flex justify-between p-2 gap-1'>
-                                <span className="text-xs font-medium UniColor">View All</span>
-                            </p>
-=======
                             <button onClick={() => setIsAmenitiesModalOpen(true)} className='flex justify-between p-2 gap-1'>
                                 <span className="text-xs font-medium UniColor">View All</span>
                             </button>
->>>>>>> 2e1be43 (product done)
                         </div>
+
                     </div>
 
                     <div className='border border-1 rounded-lg p-6 my-3'>
@@ -584,11 +546,7 @@ export default function Home() {
                                 <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full max-h-screen flex flex-col">
                                     {/* Header (Fixed) */}
                                     <div className="flex justify-between items-center pb-2">
-<<<<<<< HEAD
-                                        <h2 className="text-xl font-semibold">About the Property</h2>
-=======
                                         <h2 className="text-xl font-semibold">Amenities</h2>
->>>>>>> 2e1be43 (product done)
                                         <button onClick={() => setIsAmenitiesModalOpen(false)}>
                                             <i className="fa-solid fa-xmark text-gray-600 hover:text-black"></i>
                                         </button>
@@ -842,111 +800,6 @@ export default function Home() {
                 </div>
             </div>
 
-<<<<<<< HEAD
-            <div className='md:grid md:gap-6 mx-auto p-6 overflow-y-auto max-h-[screen] scrollbar-hidden'>
-                <div className='border border-1 rounded-lg p-3 my-2 pb-5 '>
-                    <div className='flex justify-between'>
-                        <h1 className='text-l md:text-2xl font-bold'>Nearby Locations and Map</h1>
-                        <div className=' md:flex justify-between'>
-                            <button
-                                onClick={() => setView("map")}
-                                className={`px-6 py-2 rounded-lg text-sm ${view === "map" ? "border border-2 text-black" : "bg-gray-200"}`}>
-                                Map View
-                            </button>
-                            <button
-                                onClick={() => setView("street")}
-                                className={`px-6 py-2 rounded-lg text-sm ${view === "map" ? "border border-2 text-black" : "bg-gray-200"}`}>
-                                Street View
-                            </button>
-                        </div>
-                    </div>
-                    <div className='my-5'>
-                        {view === "map" ? (
-                            <div className="p-2">
-                                {/* Tab Buttons */}
-                                <div className="md:flex border-b">
-                                    <button
-                                        onClick={() => setAddressActiveTab("addressTab1")}
-                                        className={`px-6 py-2 text-m font-semibold ${activeTab === "tab1" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-600"
-                                            }`}
-                                    >
-                                        Universities
-                                    </button>
-                                    <button
-                                        onClick={() => setAddressActiveTab("addressTab2")}
-                                        className={`px-6 py-2 text-m font-semibold ${activeTab === "tab2" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-600"
-                                            }`}
-                                    >
-                                        Bus Stations
-                                    </button>
-                                    <button
-                                        onClick={() => setAddressActiveTab("addressTab3")}
-                                        className={`px-6 py-2 text-m font-semibold ${activeTab === "tab3" ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-600"
-                                            }`}
-                                    >
-                                        Train Stations
-                                    </button>
-                                </div>
-
-                                {/* Tab Content */}
-                                <div className="mt-4 p-4 border rounded-lg">
-                                    {activeAddressTab === "addressTab1" && (
-                                        <div className='md:flex justify-between'>
-                                            <div className="w-full md:w-full lg:w-full">
-                                                <iframe
-                                                    title='map1'
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188839.20277303818!2d73.69814984457464!3d18.52487061439116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1739902899074!5m2!1sen!2sin"
-                                                    className="w-full h-[450px] rounded-lg"
-                                                    style={{ border: "0" }} // Corrected JSX style
-                                                    allowFullScreen
-                                                    loading="lazy"
-                                                    referrerPolicy="no-referrer-when-downgrade"
-                                                ></iframe>
-                                            </div>
-                                            <div className='p-3'>
-                                                <p className='border-b my-5'>Queen Mary University Of London (stop E) <span className='ml-5 text-right'>0.2 mi</span></p>
-                                                <p className='border-b my-5'>Queen Mary University Of London (stop E) <span className='ml-5 text-right'>0.2 mi</span></p>
-                                                <p className='border-b my-5'>Queen Mary University Of London (stop E) <span className='ml-5 text-right'>0.2 mi</span></p>
-                                                <p className='border-b my-5'>Queen Mary University Of London (stop E) <span className='ml-5 text-right'>0.2 mi</span></p>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {activeAddressTab === "addressTab2" && (
-                                        <div>
-                                            <h2 className="text-xl font-bold">Tab 2 Content</h2>
-                                            <p>This is the content for Tab 2.</p>
-                                        </div>
-                                    )}
-
-                                    {activeAddressTab === "addressTab3" && (
-                                        <div>
-                                            <h2 className="text-xl font-bold">Tab 3 Content</h2>
-                                            <p>This is the content for Tab 3.</p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="flex items-center justify-center">
-                                <div className="w-full h-screen flex items-center justify-center">
-                                    <iframe
-                                        title='map2'
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188839.20277303818!2d73.69814984457464!3d18.52487061439116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1739902899074!5m2!1sen!2sin"
-                                        className="w-full h-full"
-                                        style={{ border: "0" }}
-                                        allowFullScreen
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                    ></iframe>
-                                </div>
-
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-=======
             <section ref={mapRef} >
                 <div className='md:grid md:gap-6 mx-auto p-6 overflow-y-auto max-h-[screen] scrollbar-hidden'>
                     <div className='border border-1 rounded-lg p-3 my-2 pb-5 '>
@@ -1052,7 +905,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
->>>>>>> 2e1be43 (product done)
 
             <div className='md:grid md:gap-6 mx-auto p-6 overflow-y-auto max-h-[screen] scrollbar-hidden'>
                 <div className='border border-1 rounded-lg p-3 pb-5'>
