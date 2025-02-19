@@ -368,7 +368,6 @@ export default function Home() {
                             </button>
 >>>>>>> 2e1be43 (product done)
                         </div>
-
                     </div>
 
                     <div className='border border-1 rounded-lg p-6 my-3'>
