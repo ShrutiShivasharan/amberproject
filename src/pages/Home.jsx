@@ -212,44 +212,52 @@ export default function Home() {
 
     return (
         <>
-            <div className="md:grid md:grid-cols-12 md:gap-6 max-w-full mx-auto p-6">
-                <div className="md:col-span-8 max-h-[screen]">
-                    <div className='border border-1 border-t-0  rounded-lg p-6 mb-3 -mt-[50px]'>
+            <div className="grid grid-cols-12">
+                <div className="col-span-12 sm:col-span-1 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-8">
+                    <div className="border border-1 border-t-0 rounded-lg p-6 mb-3">
                         <p className="UniColor text-l my-1">United Kingdom / England / London</p>
-                        <div className="grid grid-cols-12 gap-6 max-w-6xl mx-auto">
-                            <div className="col-span-12 md:col-span-9 lg:col-span-9">
-                                <div className="my-3">
-                                    <div className="relative w-full max-w-2xl mx-auto">
-                                        <div className="relative overflow-hidden rounded-lg">
-                                            <img src={images[currentIndex]} alt="banners" className="w-full" />
+                        <div className="grid grid-cols-12 gap-4">
+                            <div className="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-9 xl:col-span-9 2xl:col-span-9 bg-white flex items-center">
+                                <div className="m-3 w-full">
+                                    <div className="relative w-full h-[400px]">
+                                        <div className="relative w-full h-full overflow-hidden rounded-lg">
+                                            <img
+                                                src={images[currentIndex]}
+                                                alt="banners"
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                         <div className="absolute top-2 left-2 bg-white text-green-700 text-sm px-3 py-1 rounded-md">
                                             Immediate Move-In
                                         </div>
                                         <div className="absolute bottom-2 left-2 bg-white text-black text-sm px-3 py-1 rounded-full">
-                                            <i class="fa-solid fa-star mx-2 fa-sx text-green-700"></i>4.9 (10)
+                                            <i className="fa-solid fa-star mx-2 fa-xs text-green-700"></i>4.9 (10)
                                         </div>
                                         <button
                                             onClick={goToPreviousBtn}
-                                            className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-3 py-2 rounded-full focus:outline-none">
+                                            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full shadow-lg focus:outline-none"
+                                        >
                                             <i className="fa-solid fa-chevron-left"></i>
                                         </button>
                                         <button
                                             onClick={goToNextBtn}
-                                            className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white px-3 py-2 rounded-full focus:outline-none">
+                                            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full shadow-lg focus:outline-none"
+                                        >
                                             <i className="fa-solid fa-chevron-right"></i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div className="hidden lg:flex lg:flex-col lg:col-span-3 lg:py-4 bg-white space-y-3">
-                                <img src={img1} alt="Video" className="rounded w-full h-auto" />
-                                <img src={img1} alt="Video" className="rounded w-full h-auto" />
-                                <img src={img1} alt="Video" className="rounded w-full h-auto" />
+                            <div className="col-span-12 sm:col-span-4 md:col-span-3 lg:col-span-3 xl:col-span-3 2xl:col-span-3 bg-white flex items-center">
+                                <div className="flex flex-col space-y-3 p-3 w-full">
+                                    <img src={img1} alt="Video" className="rounded w-full h-[120px] object-cover" />
+                                    <img src={img1} alt="Video" className="rounded w-full h-[120px] object-cover" />
+                                    <img src={img1} alt="Video" className="rounded w-full h-[120px] object-cover" />
+                                </div>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 my-2 sm:grid-cols-3 lg:grid-cols-6">
+                        <div className="grid grid-cols-2 gap-2 my-2 lg:grid-cols-6">
                             <button className="flex flex-1 items-center justify-center space-x-2 hover:bg-gray-200 border border-black p-1 rounded-lg w-full">
                                 <i className="fa-solid fa-camera"></i>
                                 <span className="text-sm">Photos</span>
@@ -267,40 +275,43 @@ export default function Home() {
                             </button>
                         </div>
 
-                        <div className='md:grid md:grid-cols-12 gap-1 mx-auto my-5'>
-                            <div className="col-span-10">
-                                <div className='my-1'>
-                                    <h1 className='text-l md:text-2xl font-bold'>iQ East Court, London</h1>
-                                    <p className='text-m md:text-sm text-gray-500'>Mile End Rd, London, E1 4GG, United Kingdom</p>
-                                </div>
-                                <div className='my-4'>
-                                    <div className='flex justify-start'>
-                                        <div>
-                                            <img src="https://th.bing.com/th/id/OIP.hh9AKoGzTm2qG35s4wwD4QHaE8?w=230&h=180&c=7&r=0&o=5&pid=1.7" alt="map" style={{ width: "50px", height: "auto" }} />
-                                        </div>
-                                        <div className='text-m space-x-2'>
-                                            <p>4.3 mi from City Center</p>
-                                            <p>(26m . 31m . 1h 27m)</p>
-                                            <p className='UniColor'  onClick={scrollToMap} >View map</p>
-                                        </div>
+                        <div className="grid grid-cols-12 gap-3 my-5 items-center">
+                            <div className="col-span-12 md:col-span-9">
+                                <h1 className="text-lg md:text-2xl font-bold">iQ East Court, London</h1>
+                                <p className="text-sm md:text-base text-gray-500">
+                                    Mile End Rd, London, E1 4GG, United Kingdom
+                                </p>
+                                <div className="flex items-center space-x-3 my-3">
+                                    <img
+                                        src="https://th.bing.com/th/id/OIP.hh9AKoGzTm2qG35s4wwD4QHaE8?w=230&h=180&c=7&r=0&o=5&pid=1.7"
+                                        alt="map"
+                                        className="w-12 h-auto rounded-md"
+                                    />
+                                    <div className="text-sm space-y-1">
+                                        <p>4.3 mi from City Center</p>
+                                        <p>(26m · 31m · 1h 27m)</p>
+                                        <p className="text-blue-600 cursor-pointer font-semibold" onClick={scrollToMap}>
+                                            View map
+                                        </p>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-1 gap-2 md:flex md:justify-around text-sm">
-                                    <p className="flex items-center gap-2 md:px-2 md:py-2 border border-gray-300 mx-2 rounded-full">
+                                <div className="col-span-12 space-y-2 md:col-span-3 gap-2 xl:flex text-sm">
+                                    <p className="flex items-center gap-2 p-2 border border-gray-300 rounded-full">
                                         <i className="fa-solid fa-graduation-cap"></i>
-                                        Queen Mary University of London... | 0.11 mi
+                                        Queen Mary University of London | 0.11 mi
                                     </p>
-                                    <p className="flex items-center gap-2 md:px-2 md:py-2 border border-gray-300 mx-2 rounded-full">
+                                    <p className="flex items-center gap-2 p-2 border border-gray-300 rounded-full">
                                         <i className="fa-solid fa-graduation-cap"></i>
-                                        University of Cumbria London Ca... | 1.04 mi
+                                        University of Cumbria London | 1.04 mi
                                     </p>
                                 </div>
-
                             </div>
-                            <div className="text-right md:col-span-2">
-                                <p className='text-s md:text-sm text-gray-500'>From</p>
-                                <h1 className='text-sm md:text-xl font-bold'><i class="fa-solid fa-indian-rupee-sign"></i>389</h1>
-                                <p className='text-s md:text-sm text-gray-500'>per week</p>
+                            <div className="col-span-12 md:col-span-3 md:text-right l:text-right space-y-1">
+                                <p className="text-sm text-gray-500">From</p>
+                                <h1 className="text-lg md:text-2xl font-bold">
+                                    <i className="fa-solid fa-indian-rupee-sign"></i> 389
+                                </h1>
+                                <p className="text-sm text-gray-500">per week</p>
                             </div>
                         </div>
 
@@ -707,7 +718,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="md:col-span-4 bg-white" >
+                <div className="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4" >
                     <div className='border border-1 rounded-lg p-3 my-2 pb-5 '>
                         <div className='flex justify-between my-3'>
                             <h2 className="text-m font-semibold">iQ East Court, London</h2>
@@ -798,7 +809,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             <section ref={mapRef} >
                 <div className='md:grid md:gap-6 mx-auto p-6 overflow-y-auto max-h-[screen] scrollbar-hidden'>
