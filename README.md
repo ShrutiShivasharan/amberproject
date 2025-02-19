@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+# amberproject
+amber project 
+=======
+<<<<<<< HEAD
+>>>>>>> 2e1be43 (product done)
 # amberDemoProject
 
 
@@ -164,3 +171,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> b55f85f (Initialize project using Create React App)
+<<<<<<< HEAD
+=======
+>>>>>>> f2488b1 (product done)
+>>>>>>> 2e1be43 (product done)
