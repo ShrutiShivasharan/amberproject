@@ -1,0 +1,24 @@
+/* Hides the scrollbar but still allows scrolling */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hidden {
+    -ms-overflow-style: none;  /* For Internet Explorer */
+    scrollbar-width: none;  /* For Firefox */
+}
+
+
+.headercss{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.UniColor{
+    color:#f3123c;
+}
+.UniBgColor{
+   background-color:#f3123c;
+}
+.UniBorderColor{
+    border: 1px solid #f3123c;
+}
