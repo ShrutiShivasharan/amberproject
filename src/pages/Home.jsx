@@ -213,7 +213,7 @@ export default function Home() {
     return (
         <>
             <div className="grid grid-cols-12">
-                <div className="col-span-12 sm:col-span-1 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-8">
+                <div className="col-span-12 sm:col-span-1 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-8 overflow-y-auto max-h-[100vh] scrollbar-hidden">
                     <div className="border border-1 border-t-0 rounded-lg p-6 mb-3">
                         <p className="UniColor text-l my-1">United Kingdom / England / London</p>
                         <div className="grid grid-cols-12 gap-4">
@@ -809,7 +809,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
 
             <section ref={mapRef} >
                 <div className='md:grid md:gap-6 mx-auto p-6 overflow-y-auto max-h-[screen] scrollbar-hidden'>
